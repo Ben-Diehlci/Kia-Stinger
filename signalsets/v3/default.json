@@ -51,6 +51,7 @@
     {"id": "STINGER_TT_RR",         "path": "Tires", "fmt": {"bix": 136,                       "len": 8, "max": 127, "min": -50, "sign": true, "unit": "celsius" }, "name": "Rear right tire temperature"},
     {"id": "STINGER_TP_RL",         "path": "Tires", "fmt": {"bix": 128, "div": 5,             "len": 8,             "max": 51,                "unit": "psi" },     "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
     {"id": "STINGER_TT_RL",         "path": "Tires", "fmt": {"bix": 104,                       "len": 8, "max": 127, "min": -50, "sign": true, "unit": "celsius" }, "name": "Rear left tire temperature"},
+    {"id": "STINGER_TW_RL",         "path": "Tires", "fmt": {"bix": 176, "len": 8, "max": 1,                                                   "unit": "noyes"   }, "name": "Tire alert rear left"},
     {"id": "STINGER_TB_FL", "path": "Tires", "name": "Tire battery front left", "fmt": {"bix": 48, "len": 8, "map": {
           "0": { "description": ">3 V",        "value": "3V+" },
           "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
