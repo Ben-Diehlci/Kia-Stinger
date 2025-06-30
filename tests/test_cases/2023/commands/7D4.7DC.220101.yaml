@@ -1,79 +1,82 @@
 command_id: 7D4.7DC.220101
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
+- expected_values: {}
+  response: |-
     7DC1012620101475DFE
     7DC21FFDB0000000000
     7DC220000101D01AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC1012620101747100
     7DC2100010000000000
     7DC220000101101AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC1012620101757300
     7DC21FFF50000000000
     7DC220000101101AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC10126201017673FF
     7DC21012B0000000000
     7DC220000102401AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC1012620101787500
     7DC21FFF20000000000
     7DC220010101B01AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC10126201017D0000
     7DC2100000000000000
     7DC220000001D01AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
+    7DC1012620101817DFA
+    7DC21FFF40000001F01
+    7DC223610101501AAAA
+- expected_values: {}
+  response: |-
     7DC1012620101898301
     7DC210028FFFC012F01
     7DC22D710102D01AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC10126201018B8414
     7DC210578FB3FF81600
     7DC22C510101A01AAAA
-  expected_values: {}
-- response: |-
-    7DC10126201018C8704
-    7DC21008FFEA3021500
-    7DC22BA10102501AAAA
-  expected_values: {}
-- response: |-
-    7DC10126201018C88F4
-    7DC21FFEBFFFE008605
-    7DC224110101801AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
+    7DC10126201018C8701
+    7DC21000FFFEC004002
+    7DC228010101901AAAA
+- expected_values: {}
+  response: |-
+    7DC10126201018C8809
+    7DC2100030000009205
+    7DC22B810101D01AAAA
+- expected_values: {}
+  response: |-
     7DC10126201018C88F9
     7DC21FFF80046FF8F05
     7DC229010101801AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC10126201018C89F2
     7DC21FFF6FFE1008004
     7DC22FF10101B01AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC10126201018C8A01
     7DC2100480000000000
     7DC220010103801AAAA
-  expected_values: {}
-- response: |-
-    7DC1012620101908DFA
-    7DC21FFEB0000004302
-    7DC22A410102001AAAA
-  expected_values: {}
-- response: |-
+- expected_values: {}
+  response: |-
     7DC1012620101908EF8
     7DC21FFF40000013D02
     7DC226210102A01AAAA
-  expected_values: {}
+- expected_values: {}
+  response: |-
+    7DC1012620101918E13
+    7DC210027009EFD4F03
+    7DC221810101A01AAAA

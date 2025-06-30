@@ -1,11 +1,6 @@
 command_id: 770.778.22BC03
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
-    778100B62BC03FDEE20
-    778216200000000AAAA
-  expected_values:
+- expected_values:
     STINGER_BELT_DRIV: 0
     STINGER_BELT_DRIVER: 0
     STINGER_BELT_PASS: 0
@@ -18,10 +13,10 @@ test_cases:
     STINGER_HANDBRAKE: 0
     STINGER_HOOD: 0
     STINGER_TRUNK: 0
-- response: |-
+  response: |-
     778100B62BC03FDEE20
-    778216200600400AAAA
-  expected_values:
+    778216200000000AAAA
+- expected_values:
     STINGER_BELT_DRIV: 0
     STINGER_BELT_DRIVER: 1.0
     STINGER_BELT_PASS: 0
@@ -34,10 +29,10 @@ test_cases:
     STINGER_HANDBRAKE: 0
     STINGER_HOOD: 0
     STINGER_TRUNK: 0
-- response: |-
+  response: |-
     778100B62BC03FDEE20
-    778216200620000AAAA
-  expected_values:
+    778216200600400AAAA
+- expected_values:
     STINGER_BELT_DRIV: 1.0
     STINGER_BELT_DRIVER: 1.0
     STINGER_BELT_PASS: 0
@@ -50,12 +45,12 @@ test_cases:
     STINGER_HANDBRAKE: 0
     STINGER_HOOD: 0
     STINGER_TRUNK: 0
-- response: |-
+  response: |-
     778100B62BC03FDEE20
-    77821620A600000AAAA
-  expected_values:
+    778216200620000AAAA
+- expected_values:
     STINGER_BELT_DRIV: 0
-    STINGER_BELT_DRIVER: 1.0
+    STINGER_BELT_DRIVER: 0
     STINGER_BELT_PASS: 0
     STINGER_BELT_PASSENGER: 0
     STINGER_DEFOG_SW: 0
@@ -65,11 +60,11 @@ test_cases:
     STINGER_DOOR_RR: 0
     STINGER_HANDBRAKE: 0
     STINGER_HOOD: 0
-    STINGER_TRUNK: 0
-- response: |-
+    STINGER_TRUNK: 1.0
+  response: |-
     778100B62BC03FDEE20
-    77821628A000000AAAA
-  expected_values:
+    77821620B000000AAAA
+- expected_values:
     STINGER_BELT_DRIV: 0
     STINGER_BELT_DRIVER: 0
     STINGER_BELT_PASS: 0
@@ -82,3 +77,6 @@ test_cases:
     STINGER_HANDBRAKE: 0
     STINGER_HOOD: 0
     STINGER_TRUNK: 0
+  response: |-
+    778100B62BC03FDEE20
+    77821628A000000AAAA
