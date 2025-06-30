@@ -41,53 +41,42 @@
     {"id": "STINGER_HL_HIGH", "path": "Lights", "fmt": {"bix": 48, "len": 8, "max": 1, "div": 12, "unit": "noyes" }, "name": "Headlight high beam on"},
     {"id": "STINGER_HL_LOW",  "path": "Lights", "fmt": {"bix": 56, "len": 8, "max": 1, "div": 12, "unit": "noyes" }, "name": "Headlight low beam on"}
   ]},
-{ "hdr": "7A0", "rax": "7A8", "dbg": true, "cmd": {"22": "C00B"}, "freq": 1, "filter": { "to": 2020 },
-  "signals": [
-    {"id": "ELANTRA_TP_FL_PRE21", "path": "Tires", "fmt": {"bix": 32,  "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure front left",     "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "ELANTRA_TT_FL_PRE21", "path": "Tires", "fmt": {"bix": 40,  "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature front left"},
-    {"id": "ELANTRA_TP_FR_PRE21", "path": "Tires", "fmt": {"bix": 64,  "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure front right",    "suggestedMetric": "frontRightTirePressure"},
-    {"id": "ELANTRA_TT_FR_PRE21", "path": "Tires", "fmt": {"bix": 72,  "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature front right"},
-    {"id": "ELANTRA_TP_RR_PRE21", "path": "Tires", "fmt": {"bix": 96,  "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure rear right",     "suggestedMetric": "rearRightTirePressure"},
-    {"id": "ELANTRA_TT_RR_PRE21", "path": "Tires", "fmt": {"bix": 104, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature rear right"},
-    {"id": "ELANTRA_TP_RL_PRE21", "path": "Tires", "fmt": {"bix": 128, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure rear left",      "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "ELANTRA_TT_RL_PRE21", "path": "Tires", "fmt": {"bix": 136, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature rear left)"}
-  ]},
 { "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00B"}, "freq": 15, "dbgfilter": { "years": [2019, 2021], "from": 2024 },
   "signals": [
-    {"id": "ELANTRA_TP_FL", "path": "Tires", "fmt": {"bix": 32,  "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure front left",     "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "ELANTRA_TT_FL", "path": "Tires", "fmt": {"bix": 40,  "len": 8, "max": 100, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature front left"},
-    {"id": "ELANTRA_TW_FL", "path": "Tires", "fmt": {"bix": 56,  "len": 8, "max": 1,                                     "unit": "noyes"   }, "name": "Tire alert front left"},
-    {"id": "ELANTRA_TP_FR", "path": "Tires", "fmt": {"bix": 72,  "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure front right",    "suggestedMetric": "frontRightTirePressure"},
-    {"id": "ELANTRA_TT_FR", "path": "Tires", "fmt": {"bix": 80,  "len": 8, "max": 100, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature front right"},
-    {"id": "ELANTRA_TW_FR", "path": "Tires", "fmt": {"bix": 96,  "len": 8, "max": 1,                                     "unit": "noyes"   }, "name": "Tire alert front right"},
-    {"id": "ELANTRA_TP_RR", "path": "Tires", "fmt": {"bix": 112, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure rear right",     "suggestedMetric": "rearRightTirePressure"},
-    {"id": "ELANTRA_TT_RR", "path": "Tires", "fmt": {"bix": 120, "len": 8, "max": 100, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature rear right"},
-    {"id": "ELANTRA_TW_RR", "path": "Tires", "fmt": {"bix": 136, "len": 8, "max": 1,                                     "unit": "noyes"   }, "name": "Tire alert rear right"},
-    {"id": "ELANTRA_TP_RL", "path": "Tires", "fmt": {"bix": 152, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Tire pressure rear left",      "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "ELANTRA_TT_RL", "path": "Tires", "fmt": {"bix": 160, "len": 8, "max": 100, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Tire temperature rear left"},
-    {"id": "ELANTRA_TW_RL", "path": "Tires", "fmt": {"bix": 176, "len": 8, "max": 1,                                     "unit": "noyes"   }, "name": "Tire alert rear left"},
-    {"id": "ELANTRA_TB_FL", "path": "Tires", "name": "Tire battery front left", "fmt": {"bix": 48, "len": 8, "map": {
+    {"id": "STINGER_TP_FL",         "path": "Tires", "fmt": {"bix": 32,  "div": 5, "len": 8, "max": 51,                            "unit": "psi"       }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "STINGER_TP_FR",         "path": "Tires", "fmt": {"bix": 64,  "div": 5, "len": 8, "max": 51,                            "unit": "psi"       }, "name": "Front right tire pressure",   "suggestedMetric": "frontRightTirePressure"},
+    {"id": "STINGER_TP_RL",         "path": "Tires", "fmt": {"bix": 96,  "div": 5, "len": 8, "max": 51,                            "unit": "psi"       }, "name": "Rear left tire pressure",     "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "STINGER_TP_RR",         "path": "Tires", "fmt": {"bix": 128, "div": 5, "len": 8, "max": 51,                            "unit": "psi"       }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "STINGER_TT_FL",         "path": "Tires", "fmt": {"bix": 40,            "len": 8, "max": 127, "min": -50, "sign": true, "unit": "celsius"   }, "name": "Front left tire temperature"},
+    {"id": "STINGER_TT_FR",         "path": "Tires", "fmt": {"bix": 72,            "len": 8, "max": 127, "min": -50, "sign": true, "unit": "celsius"   }, "name": "Front right tire temperature"},
+    {"id": "STINGER_TT_RR",         "path": "Tires", "fmt": {"bix": 136,           "len": 8, "max": 127, "min": -50, "sign": true, "unit": "celsius"   }, "name": "Rear right tire temperature"},
+    {"id": "STINGER_TT_RL",         "path": "Tires", "fmt": {"bix": 104,           "len": 8, "max": 127, "min": -50, "sign": true, "unit": "celsius"   }, "name": "Rear left tire temperature"},
+    {"id": "STINGER_TW_FL",         "path": "Tires", "fmt": {"bix": 24,            "len": 8, "max": 99,                             "unit": "scalar"   }, "name": "Front left tire alert"},
+    {"id": "STINGER_TW_FR",         "path": "Tires", "fmt": {"bix": 56,            "len": 8, "max": 99,                             "unit": "scalar"   }, "name": "Front right tire alert"},
+    {"id": "STINGER_TW_RR",         "path": "Tires", "fmt": {"bix": 80,            "len": 8, "max": 99,                             "unit": "scalar"   }, "name": "Rear right tire alert"},
+    {"id": "STINGER_TW_RL",         "path": "Tires", "fmt": {"bix": 112,           "len": 8, "max": 99,                             "unit": "scalar"   }, "name": "Rear left tire alert"},
+    {"id": "STINGER_TB_FL", "path": "Tires", "name": "Tire battery front left", "fmt": {"bix": 48, "len": 8, "map": {
           "0": { "description": ">3 V",        "value": "3V+" },
           "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
           "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
           "3": { "description": "< 2.4",       "value": "2_4-" }
         }}
     },
-    {"id": "ELANTRA_TB_FR", "path": "Tires", "name": "Tire battery front right", "fmt": {"bix": 88, "len": 8, "map": {
+    {"id": "STINGER_TB_FR", "path": "Tires", "name": "Tire battery front right", "fmt": {"bix": 88, "len": 8, "map": {
           "0": { "description": ">3 V",        "value": "3V+" },
           "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
           "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
           "3": { "description": "< 2.4",       "value": "2_4-" }
         }}
     },
-    {"id": "ELANTRA_TB_RR", "path": "Tires", "name": "Tire battery rear right", "fmt": {"bix": 128, "len": 8, "map": {
+    {"id": "STINGER_TB_RR", "path": "Tires", "name": "Tire battery rear right", "fmt": {"bix": 120, "len": 8, "map": {
           "0": { "description": ">3 V",        "value": "3V+" },
           "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
           "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
           "3": { "description": "< 2.4",       "value": "2_4-" }
         }}
     },
-    {"id": "ELANTRA_TB_RL", "path": "Tires", "name": "Tire battery rear left", "fmt": {"bix": 168, "len": 8, "map": {
+    {"id": "STINGER_TB_RL", "path": "Tires", "name": "Tire battery rear left", "fmt": {"bix": 144, "len": 8, "map": {
           "0": { "description": ">3 V",        "value": "3V+" },
           "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
           "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
