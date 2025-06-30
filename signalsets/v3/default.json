@@ -56,31 +56,31 @@
     {"id": "STINGER_TW_RR",         "path": "Tires", "fmt": {"bix": 80,            "len": 8, "max": 10000,                             "unit": "scalar"   }, "name": "Rear right tire alert"},
     {"id": "STINGER_TW_RL",         "path": "Tires", "fmt": {"bix": 112,           "len": 8, "max": 10000,                             "unit": "scalar"   }, "name": "Rear left tire alert"},
     {"id": "STINGER_TB_FL", "path": "Tires", "name": "Tire battery front left", "fmt": {"bix": 48, "len": 8, "map": {
-          "0": { "description": ">3 V",        "value": "3V+" },
-          "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
-          "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
-          "3": { "description": "< 2.4",       "value": "2_4-" }
+          "0": { "description": ">3 V",        "value": "3V+"      },
+          "1": { "description": "2.7 - 3 V",   "value": "2.7-3V"   },
+          "2": { "description": "2.4 - 2.7 V", "value": "2.4-2.7V" },
+          "3": { "description": "< 2.4",       "value": "0-2.4V"   }
         }}
     },
     {"id": "STINGER_TB_FR", "path": "Tires", "name": "Tire battery front right", "fmt": {"bix": 88, "len": 8, "map": {
-          "0": { "description": ">3 V",        "value": "3V+" },
-          "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
-          "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
-          "3": { "description": "< 2.4",       "value": "2_4-" }
+          "0": { "description": ">3 V",        "value": "3V+"      },
+          "1": { "description": "2.7 - 3 V",   "value": "2.7-3V"   },
+          "2": { "description": "2.4 - 2.7 V", "value": "2.4-2.7V" },
+          "3": { "description": "< 2.4",       "value": "0-2.4v"   }
         }}
     },
     {"id": "STINGER_TB_RR", "path": "Tires", "name": "Tire battery rear right", "fmt": {"bix": 120, "len": 8, "map": {
-          "0": { "description": ">3 V",        "value": "3V+" },
-          "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
-          "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
-          "3": { "description": "< 2.4",       "value": "2_4-" }
+          "0": { "description": ">3 V",        "value": "3V+"      },
+          "1": { "description": "2.7 - 3 V",   "value": "2.7-_3V"  },
+          "2": { "description": "2.4 - 2.7 V", "value": "2.4-2.7V" },
+          "3": { "description": "< 2.4",       "value": "0-2.4V"   }
         }}
     },
     {"id": "STINGER_TB_RL", "path": "Tires", "name": "Tire battery rear left", "fmt": {"bix": 144, "len": 8, "map": {
-          "0": { "description": ">3 V",        "value": "3V+" },
-          "1": { "description": "2.7 - 3 V",   "value": "27_3V" },
-          "2": { "description": "2.4 - 2.7 V", "value": "2_4_2_7V" },
-          "3": { "description": "< 2.4",       "value": "2_4-" }
+          "0": { "description": ">3 V",        "value": "3V+"      },
+          "1": { "description": "2.7 - 3 V",   "value": "2.7-3V"   },
+          "2": { "description": "2.4 - 2.7 V", "value": "2.4-2.7V" },
+          "3": { "description": "< 2.4",       "value": "0-2.4V"   }
         }}
     }
   ]},
