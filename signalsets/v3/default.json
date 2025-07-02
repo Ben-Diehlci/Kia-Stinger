@@ -161,9 +161,15 @@
     {"id": "STINGER_KNOCK_LEARN_5",  "path": "Engine", "fmt": {"bix": 192, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 5"},
     {"id": "STINGER_KNOCK_LEARN_6",  "path": "Engine", "fmt": {"bix": 200, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 6"},
     {"id": "TEST_1",  "path": "Engine", "fmt": {"bix": 144, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 1"},
-    {"id": "TEST_2",  "path": "Engine", "fmt": {"bix": 152, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 1"}
-
-
+    {"id": "TEST_2",  "path": "Engine", "fmt": {"bix": 152, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 2"},
+    {"id": "TEST_3",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 3"},
+    {"id": "TEST_4",  "path": "Engine", "fmt": {"bix": 40, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 4"},
+    {"id": "TEST_5",  "path": "Engine", "fmt": {"bix": 48, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 5"},
+    {"id": "TEST_6",  "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 6"},
+    {"id": "TEST_7",  "path": "Engine", "fmt": {"bix": 64, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 7"},
+    {"id": "TEST_8",  "path": "Engine", "fmt": {"bix": 72, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 8"},
+    {"id": "TEST_9",  "path": "Engine", "fmt": {"bix": 80, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 9"},
+    {"id": "TEST_10",  "path": "Engine", "fmt": {"bix": 88, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 10"}
   ]}
 ]
 }
