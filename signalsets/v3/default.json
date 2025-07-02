@@ -159,7 +159,11 @@
     {"id": "STINGER_KNOCK_LEARN_3",  "path": "Engine", "fmt": {"bix": 176, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 3"},
     {"id": "STINGER_KNOCK_LEARN_4",  "path": "Engine", "fmt": {"bix": 184, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 4"},
     {"id": "STINGER_KNOCK_LEARN_5",  "path": "Engine", "fmt": {"bix": 192, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 5"},
-    {"id": "STINGER_KNOCK_LEARN_6",  "path": "Engine", "fmt": {"bix": 200, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 6"}
+    {"id": "STINGER_KNOCK_LEARN_6",  "path": "Engine", "fmt": {"bix": 200, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Knock learn cyl 6"},
+    {"id": "TEST_1",  "path": "Engine", "fmt": {"bix": 144, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 1"},
+    {"id": "TEST_2",  "path": "Engine", "fmt": {"bix": 152, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 1"}
+
+
   ]}
 ]
 }
