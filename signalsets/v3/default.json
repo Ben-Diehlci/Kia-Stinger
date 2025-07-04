@@ -148,7 +148,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E00A"}, "freq": 1, "dbgfilter": { "years": [2019, 2021], "from": 2024 },
   "signals": [
-    {"id": "TEST_5",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 5"},
+    {"id": "TEST_5",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 99999, "min": -99999, "div": 1, "mul": 0.012903, "add": -2.381, "sign": true, "unit": "unknown" }, "name": "Test 5"},
     {"id": "TEST_6",  "path": "Engine", "fmt": {"bix": 40, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 6"},
     {"id": "TEST_7",  "path": "Engine", "fmt": {"bix": 48, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 7"},
     {"id": "TEST_8",  "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 99999, "min": -99999, "div": 1, "sign": true, "unit": "unknown" }, "name": "Test 8"},
