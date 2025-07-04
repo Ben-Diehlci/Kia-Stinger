@@ -136,7 +136,7 @@
   "signals": [
     {"id": "STINGER_INTAKE_TEMP", "path": "Engine", "fmt": {"bix": 264, "len": 8, "max": 143.254781, "div": 1.3333, "add": -48, "unit": "celsius" }, "name": "Intake air temperature"},
     {"id": "STINGER_OIL_TEMP",    "path": "Engine", "fmt": {"bix": 272, "len": 8, "max": 143.254781, "div": 1.3333, "add": -48, "unit": "celsius" }, "name": "Engine oil temperature"},
-    {"id": "STINGER_ATF_TEMP",      "path": "Transmission", "fmt": {"bix": 256, "len": 8, "max": 143.254781, "div": 1.3333, "add": -48, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
+    {"id": "STINGER_ATF_TEMP",      "path": "Transmission", "fmt": {"bix": 280, "len": 8, "max": 143.254781, "div": 1.3333, "add": -48, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E002"}, "freq": 5, "dbgfilter": { "years": [2019, 2021], "from": 2024 },
   "signals": [
