@@ -155,7 +155,7 @@
     {"id": "TEST_16",  "path": "Engine", "fmt": {"bix": 120, "len": 8, "max": 20, "min": -20, "div": 1, "mul": 0.01282, "add": -2.3846, "sign": true, "unit": "unknown" }, "name": "Test 16"},
     {"id": "TEST_21",  "path": "Engine", "fmt": {"bix": 160, "len": 8, "max": 20, "min": -20, "div": 1, "mul": 0.01282, "add": -2.3846, "sign": true, "unit": "unknown" }, "name": "Test 21"}
   ]},
-{"hdr": "7E9", "freq": 1, "dbgfilter": { "years": [2019, 2021], "from": 2024 },
+{"hdr": "7E9", "cmd": {"22": "0000"}, "freq": 1, "dbgfilter": { "years": [2019, 2021], "from": 2024 },
   "signals": [
     {"id": "TEST_01", "path": "Transmission", "fmt": {"bix": 0, "len": 8, "max": 99999, "min": -99999, "sign": true, "unit": "unknown" }, "name": "Test 1"},
     {"id": "TEST_02", "path": "Transmission", "fmt": {"bix": 8, "len": 8, "max": 99999, "min": -99999, "sign": true, "unit": "unknown" }, "name": "Test 2"},
