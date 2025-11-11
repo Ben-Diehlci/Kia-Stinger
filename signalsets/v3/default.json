@@ -216,5 +216,7 @@
     {"id": "TESTEE_033", "path": "Engine", "fmt": {"bix": 256,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 33"},
     {"id": "TESTEE_040", "path": "Engine", "fmt": {"bix": 312,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 40"},
     {"id": "TESTEE_042", "path": "Engine", "fmt": {"bix": 328,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 42"}
+  ]
+}
 ]
 }
