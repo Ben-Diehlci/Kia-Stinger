@@ -189,6 +189,32 @@
     {"id": "STINGER_ATF_TEMP", "path": "Transmission", "fmt": {"bix": 16, "len": 8, "add": -40, "div": 5, "mul": 9, "max": 255, "unit": "fahrenheit" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"},
     {"id": "STINGER_ATF_PRESS", "path": "Transmission", "fmt": {"bix": 24, "len": 8, "max": 255, "div": 2.55, "unit": "psi" }, "name": "Transmission fluid pressure", "suggestedMetric": "transmissionFluidPressure"},
     {"id": "STINGER_ATF_LEVEL", "path": "Transmission", "fmt": {"bix": 32, "len": 8, "max": 100, "div": 2.55, "unit": "percent" }, "name": "Transmission fluid level", "suggestedMetric": "transmissionFluidLevel"}
-  ]}
+  ]},
+{"hdr": "7E8", "cmd": {"22": "0160"}, "freq": 1, "dbgfilter": { "years": [2019, 2021], "from": 2024 },
+  "signals": [
+    {"id": "TESTEE_001", "path": "Engine", "fmt": {"bix": 0,    "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 1"},
+    {"id": "TESTEE_002", "path": "Engine", "fmt": {"bix": 8,    "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 2"},
+    {"id": "TESTEE_003", "path": "Engine", "fmt": {"bix": 16,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 3"},
+    {"id": "TESTEE_005", "path": "Engine", "fmt": {"bix": 32,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 5"},
+    {"id": "TESTEE_006", "path": "Engine", "fmt": {"bix": 40,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 6"},
+    {"id": "TESTEE_007", "path": "Engine", "fmt": {"bix": 48,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 7"},
+    {"id": "TESTEE_008", "path": "Engine", "fmt": {"bix": 56,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 8"},
+    {"id": "TESTEE_009", "path": "Engine", "fmt": {"bix": 64,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 9"},
+    {"id": "TESTEE_010", "path": "Engine", "fmt": {"bix": 72,   "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 10"},
+    {"id": "TESTEE_015", "path": "Engine", "fmt": {"bix": 112,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 15"},
+    {"id": "TESTEE_017", "path": "Engine", "fmt": {"bix": 128,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 17"},
+    {"id": "TESTEE_018", "path": "Engine", "fmt": {"bix": 136,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 18"},
+    {"id": "TESTEE_019", "path": "Engine", "fmt": {"bix": 144,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 19"},
+    {"id": "TESTEE_020", "path": "Engine", "fmt": {"bix": 152,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 20"},
+    {"id": "TESTEE_021", "path": "Engine", "fmt": {"bix": 160,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 21"},
+    {"id": "TESTEE_024", "path": "Engine", "fmt": {"bix": 184,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 24"},
+    {"id": "TESTEE_026", "path": "Engine", "fmt": {"bix": 200,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 26"},
+    {"id": "TESTEE_027", "path": "Engine", "fmt": {"bix": 208,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 27"},
+    {"id": "TESTEE_028", "path": "Engine", "fmt": {"bix": 216,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 28"},
+    {"id": "TESTEE_029", "path": "Engine", "fmt": {"bix": 224,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 29"},
+    {"id": "TESTEE_032", "path": "Engine", "fmt": {"bix": 248,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 32"},
+    {"id": "TESTEE_033", "path": "Engine", "fmt": {"bix": 256,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 33"},
+    {"id": "TESTEE_040", "path": "Engine", "fmt": {"bix": 312,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 40"},
+    {"id": "TESTEE_042", "path": "Engine", "fmt": {"bix": 328,  "len": 8, "unit": "unknown", "max": 9999}, "name": "Teste 42"}
 ]
 }
