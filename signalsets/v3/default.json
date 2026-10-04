@@ -184,23 +184,6 @@
     {"id": "STINGER_KNOCK_LEARN_3",  "path": "Engine", "fmt": {"bix": 176, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 3"},
     {"id": "STINGER_KNOCK_LEARN_4",  "path": "Engine", "fmt": {"bix": 184, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 4"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "E00D"}, "freq": 1,
-  "signals": [
-    {"id": "STINGER_MISFIRES_C1_CUR",                                "path": "Engine", "fmt": {"bix": 48,  "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Misfires, current, cylinder 1"},
-    {"id": "STINGER_MISFIRES_C2_CUR",                                "path": "Engine", "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Misfires, current, cylinder 2"},
-    {"id": "STINGER_MISFIRES_C3_CUR",                                "path": "Engine", "fmt": {"bix": 80,  "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Misfires, current, cylinder 3"},
-    {"id": "STINGER_MISFIRES_C4_CUR",                                "path": "Engine", "fmt": {"bix": 96,  "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Misfires, current, cylinder 4"},
-    {"id": "STINGER_EMISSION_RELEVANT_MISFIRES_TOTAL_C1",            "path": "Engine", "fmt": {"bix": 176, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Emission relevant misfires total, cylinder 1"},
-    {"id": "STINGER_EMISSION_RELEVANT_MISFIRES_TOTAL_C2",            "path": "Engine", "fmt": {"bix": 192, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Emission relevant misfires total, cylinder 2"},
-    {"id": "STINGER_EMISSION_RELEVANT_MISFIRES_TOTAL_C3",            "path": "Engine", "fmt": {"bix": 208, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Emission relevant misfires total, cylinder 3"},
-    {"id": "STINGER_EMISSION_RELEVANT_MISFIRES_TOTAL_C4",            "path": "Engine", "fmt": {"bix": 224, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Emission relevant misfires total, cylinder 4"},
-    {"id": "STINGER_CATALYST_DAMAGING_MISFIRES_TOTAL_C1",            "path": "Engine", "fmt": {"bix": 304, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Catalyst damaging misfires total, cylinder 1"},
-    {"id": "STINGER_CATALYST_DAMAGING_MISFIRES_TOTAL_C2",            "path": "Engine", "fmt": {"bix": 320, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Catalyst damaging misfires total, cylinder 2"},
-    {"id": "STINGER_CATALYST_DAMAGING_MISFIRES_TOTAL_C3",            "path": "Engine", "fmt": {"bix": 336, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Catalyst damaging misfires total, cylinder 3"},
-    {"id": "STINGER_CATALYST_DAMAGING_MISFIRES_TOTAL_C4",            "path": "Engine", "fmt": {"bix": 352, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Catalyst damaging misfires total, cylinder 4"},
-    {"id": "STINGER_EMISSION_RELEVANT_MISFIRES_TOTAL_ALL_CYLINDERS", "path": "Engine", "fmt": {"bix": 432, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Emission relevant misfires total all cylinders"},
-    {"id": "STINGER_CATALYST_DAMAGING_MISFIRES_TOTAL_ALL_CYLINDERS", "path": "Engine", "fmt": {"bix": 448, "len": 16, "blsb": true, "max": 65535, "unit": "scalar" }, "name": "Catalyst damaging misfires total all cylinders"}
-  ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E010"}, "freq": 1, "dbgfilter": { "to": 2019, "from": 2021 },
   "signals": [
     {"id": "STINGER_MAF_RATE", "path": "Engine", "fmt": {"bix": 208, "len": 8, "blsb": true, "max": 10.8, "mul": 0.04239, "unit": "unknown" }, "name": "Mass air flow rate"}
@@ -279,28 +262,9 @@
   "signals": [
     {"id": "STINGER_EOT_V2", "path": "Engine", "fmt": {"bix": 184, "len": 8, "max": 251, "min": -4, "add": -4, "unit": "celsius" }, "name": "Engine oil temperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "ED03"}, "freq": 30,
-  "signals": [
-    {"id": "STINGER_EXH_T_1_UP_OXICAT",    "path": "Engine", "fmt": {"bix": 296, "len": 8,  "max": 1299.999, "mul": 4.7098,              "add": 99, "unit": "celsius"    }, "name": "Exhaust temperature 1, upstream of oxidation catalyst"},
-    {"id": "STINGER_EXH_T_2_UP_DPF",       "path": "Engine", "fmt": {"bix": 304, "len": 8,  "max": 1299.999, "mul": 4.7098,              "add": 99, "unit": "celsius"    }, "name": "Exhaust temperature 2, upstream of DPF"},
-    {"id": "STINGER_DPF_ODO_LAST_REGEN",   "path": "Trips",  "fmt": {"bix": 328, "len": 32, "max": 4294967,                 "div": 1000,            "unit": "kilometers" }, "name": "Diesel particulate filter odometer at last regeneration"},
-    {"id": "STINGER_DPF_DIST_SINCE_REGEN", "path": "Trips",  "fmt": {"bix": 360, "len": 32, "max": 4294967,                 "div": 1000,            "unit": "kilometers" }, "name": "Diesel particulate filter distance since last regeneration"},
-    {"id": "STINGER_ODO_7E0",              "path": "Trips",  "fmt": {"bix": 392, "len": 32, "max": 4294967,                 "div": 1000,            "unit": "kilometers" }, "name": "Odometer"},
-    {"id": "STINGER_DPF_REGEN_ST",         "path": "Engine", "fmt": {"bix": 431, "len": 1,  "max": 1,                                               "unit": "offon"      }, "name": "Diesel particulate filter regeneration state"},
-    {"id": "STINGER_FUEL_CONS_SINCE_DPF",  "path": "Fuel",   "fmt": {"bix": 432, "len": 8,  "max": 319,      "mul": 1.2549,                         "unit": "liters"     }, "name": "Fuel consumption since last DPF regeneration"},
-    {"id": "STINGER_DPF_REGEN_CNT",        "path": "Engine", "fmt": {"bix": 440, "len": 8,  "max": 255,                                             "unit": "scalar"     }, "name": "Diesel particulate filter regeneration count"}
-  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "ED07"}, "freq": 5,
   "signals": [
     {"id": "STINGER_EOT_7E0", "path": "Engine", "fmt": {"bix": 152, "len": 8, "max": 149.9965, "min": -50, "mul": 0.7843, "add": -50, "unit": "celsius" }, "name": "Engine oil temperature"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "ED29"}, "freq": 1,
-  "signals": [
-    {"id": "STINGER_DPF_TOT_SULFUR_MASS", "path": "Engine", "fmt": { "len": 16, "max": 9999, "mul": 0.15259, "unit": "unknown" }, "name": "Diesel particulate filter total sulfur mass"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "ED94"}, "freq": 1,
-  "signals": [
-    {"id": "STINGER_DPF_SOOT_MASS", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 99, "mul": 99, "div": 255, "unit": "unknown" }, "name": "Diesel particulate filter soot mass"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "cmd": {"22": "01A0"}, "freq": 0.25, "dbgfilter": { "to": 2018, "years": [2021] },
   "signals": [
