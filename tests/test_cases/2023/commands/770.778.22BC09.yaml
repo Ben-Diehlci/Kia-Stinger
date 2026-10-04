@@ -1,26 +1,34 @@
 command_id: 770.778.22BC09
 test_cases:
 - expected_values:
+    STINGER_DRL: 0
     STINGER_HL_HIGH: 0
     STINGER_HL_LOW: 0
+    STINGER_LOW_BEAM: 0
   response: |-
     778100B62BC09000003
     77821CC00000000AAAA
 - expected_values:
+    STINGER_DRL: 1.0
     STINGER_HL_HIGH: 0
     STINGER_HL_LOW: 0
+    STINGER_LOW_BEAM: 0
   response: |-
     778100B62BC09000003
     77821CC00000030AAAA
 - expected_values:
+    STINGER_DRL: 0
     STINGER_HL_HIGH: 0
     STINGER_HL_LOW: 0
+    STINGER_LOW_BEAM: 0
   response: |-
     778100B62BC09000003
     77821CC0000C000AAAA
 - expected_values:
+    STINGER_DRL: 0
     STINGER_HL_HIGH: 0
     STINGER_HL_LOW: 1
+    STINGER_LOW_BEAM: 0
   response: |-
     778100B62BC09000003
     77821CC0000C003AAAA

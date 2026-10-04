@@ -18,48 +18,59 @@
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC03"}, "freq": 2, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_TRUNK",     "path": "Doors",     "fmt": {"bix": 32, "len": 1, "max": 1, "unit": "noyes" }, "name": "Trunk open?"},
-    {"id": "STINGER_DOOR_FL",   "path": "Doors",     "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front left door open?"},
-    {"id": "STINGER_DOOR_FR",   "path": "Doors",     "fmt": {"bix": 35, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right door open?"},
-    {"id": "STINGER_HANDBRAKE", "path": "Control",   "fmt": {"bix": 36, "len": 1, "max": 1, "unit": "noyes" }, "name": "Handbrake engaged?"},
-    {"id": "STINGER_DOOR_RR",   "path": "Doors",     "fmt": {"bix": 37, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right door open?"},
-    {"id": "STINGER_DOOR_RL",   "path": "Doors",     "fmt": {"bix": 39, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left door open?"},
-    {"id": "STINGER_BELT_PASS", "path": "Seatbelts", "fmt": {"bix": 45, "len": 1, "max": 1, "unit": "noyes" }, "name": "Passenger seatbelt latched?"},
-    {"id": "STINGER_BELT_DRIV", "path": "Seatbelts", "fmt": {"bix": 46, "len": 1, "max": 1, "unit": "noyes" }, "name": "Driver seatbelt latched?"},
-    {"id": "STINGER_HOOD",      "path": "Doors",     "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "noyes" }, "name": "Hood latched?"},
-    {"id": "STINGER_DEFOG_SW",  "path": "Climate",   "fmt": {"bix": 62, "len": 1, "max": 1, "unit": "noyes" }, "name": "Defogging?"}
+    {"id": "STINGER_TRUNK",        "path": "Doors",     "fmt": {"bix": 32, "len": 1, "max": 1, "unit": "noyes" }, "name": "Trunk open?"},
+    {"id": "STINGER_DOOR_FL",      "path": "Doors",     "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front left door open?"},
+    {"id": "STINGER_DOOR_FR",      "path": "Doors",     "fmt": {"bix": 35, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right door open?"},
+    {"id": "STINGER_HANDBRAKE",    "path": "Doors",     "fmt": {"bix": 36, "len": 1, "max": 1, "unit": "noyes" }, "name": "Doors locked? (BCM)",         "description": "Despite the id, on a 2020 car this bit follows the central door lock, not the parking brake (reads yes at speed whenever the doors are locked)."},
+    {"id": "STINGER_DOOR_RR",      "path": "Doors",     "fmt": {"bix": 37, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right door open?"},
+    {"id": "STINGER_DOOR_RL",      "path": "Doors",     "fmt": {"bix": 39, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left door open?"},
+    {"id": "STINGER_BCM_IGNITION", "path": "Control",   "fmt": {"bix": 41, "len": 1, "max": 1, "unit": "noyes" }, "name": "Ignition on? (BCM)",          "description": "Set whenever the engine runs; ignition vs engine-run not yet separated.",                                                                         "hidden": true},
+    {"id": "STINGER_BELT_PASS",    "path": "Seatbelts", "fmt": {"bix": 45, "len": 1, "max": 1, "unit": "noyes" }, "name": "Passenger seatbelt latched?"},
+    {"id": "STINGER_BELT_DRIV",    "path": "Seatbelts", "fmt": {"bix": 46, "len": 1, "max": 1, "unit": "noyes" }, "name": "Driver seatbelt latched?"},
+    {"id": "STINGER_HOOD",         "path": "Doors",     "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "noyes" }, "name": "Hood open?",                  "description": "1 = open, like the door and trunk bits (inferred; reads 0 on a car driven with the hood shut)."},
+    {"id": "STINGER_DEFOG_SW",     "path": "Climate",   "fmt": {"bix": 62, "len": 1, "max": 1, "unit": "noyes" }, "name": "Defogging?"}
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC04"}, "freq": 2, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_GEAR_R",  "path": "Transmission", "fmt": {"bix": 35, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Reverse gear selected"},
-    {"id": "STINGER_LOCK_FL", "path": "Doors",        "fmt": {"bix": 36, "len": 1, "max": 1, "unit": "scalar" }, "name": "Front left door locked?"},
-    {"id": "STINGER_LOCK_FR", "path": "Doors",        "fmt": {"bix": 37, "len": 1, "max": 1, "unit": "scalar" }, "name": "Front right door locked?"},
-    {"id": "STINGER_BELT_RM", "path": "Seatbelts",    "fmt": {"bix": 52, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Rear middle seatbelt latched?"},
-    {"id": "STINGER_BELT_RL", "path": "Seatbelts",    "fmt": {"bix": 53, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Rear left seatbelt latched?"},
-    {"id": "STINGER_BELT_RR", "path": "Seatbelts",    "fmt": {"bix": 54, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Rear right seatbelt latched?"}
+    {"id": "STINGER_LOCK_FL", "path": "Doors",     "fmt": {"bix": 36, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front left door locked?"},
+    {"id": "STINGER_LOCK_FR", "path": "Doors",     "fmt": {"bix": 37, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right door locked?"},
+    {"id": "STINGER_BELT_RM", "path": "Seatbelts", "fmt": {"bix": 52, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear middle seatbelt latched?", "description": "Reads a constant 1 on cars without rear belt sensing."},
+    {"id": "STINGER_BELT_RL", "path": "Seatbelts", "fmt": {"bix": 53, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left seatbelt latched?",   "description": "Reads a constant 1 on cars without rear belt sensing."},
+    {"id": "STINGER_BELT_RR", "path": "Seatbelts", "fmt": {"bix": 54, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right seatbelt latched?",  "description": "Reads a constant 1 on cars without rear belt sensing."}
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC05"}, "freq": 2, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_HAZARD_SW", "path": "Lights", "fmt": {"bix": 32, "len": 8, "max": 255,                             "unit": "scalar" }, "name": "Hazard switch"},
-    {"id": "STINGER_HL_SW",     "path": "Lights", "fmt": {"bix": 48, "len": 8, "max": 1,   "nullmin": 0, "nullmax": 2, "unit": "noyes"  }, "name": "Headlight switch"}
+    {"id": "STINGER_HL_SW", "path": "Lights", "fmt": {"bix": 53, "len": 1, "max": 1, "unit": "noyes" }, "name": "Headlight switch on?"},
+    {"id": "STINGER_HAZARD_SW", "path": "Lights", "name": "Turn/hazard lamps", "description": "Lamp output, so it blinks at the flasher rate. Left vs right is inferred from driving data.", "fmt": {"bix": 32, "len": 4, "map": {
+          "0":  { "description": "Off",             "value": "OFF" },
+          "5":  { "description": "Left turn lamp",  "value": "LEFT" },
+          "10": { "description": "Right turn lamp", "value": "RIGHT" },
+          "15": { "description": "Hazard lamps",    "value": "HAZARD" }
+        }}
+    }
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC06"}, "freq": 0.25, "dbgfilter": { "to": 2019, "years": [2021] },
   "signals": [
     {"id": "STINGER_BRAKE_LIGHT", "path": "Lights", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake light"}
   ]},
-{ "hdr": "770", "rax": "778", "cmd": {"22": "BC07"}, "freq": 5, "dbgfilter": { "years": [2019] },
+{ "hdr": "770", "rax": "778", "cmd": {"22": "BC07"}, "freq": 2, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_DEFOG_LIGHT", "path": "Lights", "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "offon" }, "name": "Defog light"}
+    {"id": "STINGER_TRUNK_LAMP",  "path": "Lights", "fmt": {"bix": 35, "len": 1, "max": 1, "unit": "offon" }, "name": "Trunk lamp",          "description": "Set only while the trunk is open (inferred).",                                                "hidden": true},
+    {"id": "STINGER_DEFOG_LIGHT", "path": "Lights", "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "offon" }, "name": "Defog light",         "description": "Unverified: never set in any capture so far."},
+    {"id": "STINGER_TURN_R",      "path": "Lights", "fmt": {"bix": 58, "len": 1, "max": 1, "unit": "offon" }, "name": "Right turn lamp on?", "description": "Lamp output, so it blinks at the flasher rate. Left vs right is inferred from driving data."},
+    {"id": "STINGER_TURN_L",      "path": "Lights", "fmt": {"bix": 59, "len": 1, "max": 1, "unit": "offon" }, "name": "Left turn lamp on?",  "description": "Lamp output, so it blinks at the flasher rate. Left vs right is inferred from driving data."}
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC08"}, "freq": 2, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_TURN_R", "path": "Lights", "fmt": {"bix": 37, "len": 1, "max": 1, "unit": "offon" }, "name": "Right turn signal on?"},
-    {"id": "STINGER_TURN_L", "path": "Lights", "fmt": {"bix": 38, "len": 1, "max": 1, "unit": "offon" }, "name": "Left turn signal on?"}
+    {"id": "STINGER_GEAR_R", "path": "Transmission", "fmt": {"bix": 44, "len": 1, "max": 1, "unit": "noyes" }, "name": "Reverse selected? (BCM)", "description": "Inferred from shift sequences at low speed; confirm with a P-R-D test."},
+    {"id": "STINGER_GEAR_P", "path": "Transmission", "fmt": {"bix": 45, "len": 1, "max": 1, "unit": "noyes" }, "name": "Park/hold flag (BCM)",    "description": "Set only at standstill, but occasionally together with reverse, so it may be Auto Hold rather than Park; hidden until a P-R-N-D test.", "hidden": true}
   ]},
 { "hdr": "770", "rax": "778", "cmd": {"22": "BC09"}, "freq": 2, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_HL_HIGH", "path": "Lights", "fmt": {"bix": 55, "len": 1, "max": 1, "unit": "offon" }, "name": "Headlight high beam"},
-    {"id": "STINGER_HL_LOW",  "path": "Lights", "fmt": {"bix": 63, "len": 1, "max": 1, "unit": "offon" }, "name": "Headlight low beam"}
+    {"id": "STINGER_HL_HIGH",  "path": "Lights", "fmt": {"bix": 55, "len": 1, "max": 1, "unit": "offon" }, "name": "Headlight high beam",              "description": "Unverified: never set in any capture so far."},
+    {"id": "STINGER_DRL",      "path": "Lights", "fmt": {"bix": 58, "len": 1, "max": 1, "unit": "offon" }, "name": "Daytime running lights on?",       "description": "On in daylight with the engine running, never together with low beams."},
+    {"id": "STINGER_LOW_BEAM", "path": "Lights", "fmt": {"bix": 60, "len": 1, "max": 1, "unit": "offon" }, "name": "Low beams on? (2018-2022 layout)", "description": "On at night, agrees with the BCM's other lamp bits (2018-2022 layout)."},
+    {"id": "STINGER_HL_LOW",   "path": "Lights", "fmt": {"bix": 63, "len": 1, "max": 1, "unit": "offon" }, "name": "Headlight low beam (2023 layout)", "description": "Never set on 2018-2022 cars, which report low beams at bit 60 (STINGER_LOW_BEAM)."}
   ]},
 { "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00B"}, "freq": 15, "dbgfilter": { "years": [2019] },
   "signals": [
