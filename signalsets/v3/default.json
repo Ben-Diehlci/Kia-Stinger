@@ -104,11 +104,6 @@
     {"id": "STINGER_HVAC_DEFOG_HUMIDITY", "path": "Climate",  "fmt": {"bix": 200, "len": 8, "max": 100,                                    "unit": "percent"           }, "name": "Humidity sensor for automatic defogger"},
     {"id": "STINGER_VSS",                 "path": "Movement", "fmt": {"bix": 232, "len": 8, "max": 255,                                    "unit": "kilometersPerHour" }, "name": "Vehicle speed",                          "suggestedMetric": "speed"}
   ]},
-{ "hdr": "7B3", "rax": "7BB", "cmd": {"22": "0101"}, "freq": 5, "dbgfilter": { "to": 2019, "years": [2021] },
-  "signals": [
-    {"id": "STINGER_HVAC_IAT_PASSENGER_VENT",      "path": "Climate", "fmt": {"bix": 64, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Interior temperature, passenger vent"},
-    {"id": "STINGER_HVAC_IAT_PASSENGER_LEGS_VENT", "path": "Climate", "fmt": {"bix": 72, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Interior temperature, passenger legs vent"}
-  ]},
 { "hdr": "7C6", "rax": "7CE", "fcm1": true, "cmd": {"22": "B002"}, "freq": 5, "dbgfilter": { "years": [2019] },
   "signals": [
     {"id": "STINGER_FLI_VOL",         "path": "Fuel",       "fmt": {"bix": 32, "len": 8,  "max": 127.5,    "div": 2,    "unit": "liters"     }, "name": "Fuel level",         "suggestedMetric": "fuelTankLevel"},
@@ -125,15 +120,7 @@
   ]},
 { "hdr": "7D4", "rax": "7DC", "cmd": {"22": "0101"}, "freq": 5, "dbgfilter": { "years": [2019] },
   "signals": [
-    {"id": "STINGER_BMS_SOC",            "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 100,                 "div": 2,                 "unit": "percent"   }, "name": "State of charge"},
-    {"id": "STINGER_BMS_CHG_PWR",        "path": "Battery", "fmt": {"bix": 40,  "len": 16, "max": 655.35,              "div": 100,               "unit": "kilowatts" }, "name": "Available charge power"},
-    {"id": "STINGER_BMS_DISCHG_PWR",     "path": "Battery", "fmt": {"bix": 56,  "len": 16, "max": 655.35,              "div": 100,               "unit": "kilowatts" }, "name": "Available discharge power"},
-    {"id": "STINGER_MDPS_MOTOR_CURRENT", "path": "Engine",  "fmt": {"bix": 88,  "len": 8,  "max": 127,    "min": -128,             "sign": true, "unit": "amps"      }, "name": "Motor-driven power steering current"},
-    {"id": "STINGER_BMS_MIN_TEMP",       "path": "Battery", "fmt": {"bix": 120, "len": 8,  "max": 80,     "min": -40,              "sign": true, "unit": "celsius"   }, "name": "Battery min temp"},
-    {"id": "STINGER_BMS_MOD1_TEMP",      "path": "Battery", "fmt": {"bix": 128, "len": 8,  "max": 80,     "min": -40,              "sign": true, "unit": "celsius"   }, "name": "Battery mod 1 temp"},
-    {"id": "STINGER_BMS_MOD2_TEMP",      "path": "Battery", "fmt": {"bix": 136, "len": 8,  "max": 80,     "min": -40,              "sign": true, "unit": "celsius"   }, "name": "Battery mod 2 temp"},
-    {"id": "STINGER_BMS_MOD3_TEMP",      "path": "Battery", "fmt": {"bix": 144, "len": 8,  "max": 80,     "min": -40,              "sign": true, "unit": "celsius"   }, "name": "Battery mod 3 temp"},
-    {"id": "STINGER_BMS_MOD4_TEMP",      "path": "Battery", "fmt": {"bix": 152, "len": 8,  "max": 80,     "min": -40,              "sign": true, "unit": "celsius"   }, "name": "Battery mod 4 temp"}
+    {"id": "STINGER_MDPS_MOTOR_CURRENT", "path": "Control", "fmt": {"bix": 88, "len": 8, "max": 127, "min": -128, "sign": true, "unit": "amps" }, "name": "Motor-driven power steering current", "description": "Unverified: reads a constant 16 (sometimes 0 or 17) in every year's captures, so the -48 to 102 A range from the donor signalset is not reproduced.", "hidden": true}
   ]},
 { "hdr": "7E0", "cmd": {"01": "2F"}, "freq": 60,
   "signals": [
@@ -156,33 +143,13 @@
     {"id": "STINGER_INJ_DUR_5", "path": "Engine", "fmt": {"bix": 240, "len": 16, "blsb": true, "max": 53.68, "div": 1220.7, "unit": "milliseconds" }, "name": "Injection duration cylinder 5"},
     {"id": "STINGER_INJ_DUR_6", "path": "Engine", "fmt": {"bix": 256, "len": 16, "blsb": true, "max": 53.68, "div": 1220.7, "unit": "milliseconds" }, "name": "Injection duration cylinder 6"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E004"}, "freq": 5,
-  "signals": [
-    {"id": "STINGER_22E004",  "path": "Engine.Unknown", "fmt": {            "len": 8, "max": 100,               "unit": "scalar"  }, "name": "Unknown"},
-    {"id": "STINGER_AUX_SOC", "path": "Battery",        "fmt": {"bix": 320, "len": 8, "max": 100, "nullmin": 0, "unit": "percent" }, "name": "Aux battery state of charge"},
-    {"id": "STINGER_AUX_SOH", "path": "Battery",        "fmt": {"bix": 328, "len": 8, "max": 100, "nullmin": 0, "unit": "percent" }, "name": "Aux battery state of health"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E005"}, "freq": 2, "dbgfilter": { "to": 2019, "years": [2021], "from": 2023 },
-  "signals": [
-    {"id": "STINGER_GDI_IT_A1", "path": "Engine", "fmt": {"bix": 224, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank a, 1"},
-    {"id": "STINGER_GDI_IT_A2", "path": "Engine", "fmt": {"bix": 240, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank a, 2"},
-    {"id": "STINGER_GDI_IT_A3", "path": "Engine", "fmt": {"bix": 256, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank a, 3"},
-    {"id": "STINGER_GDI_IT_A4", "path": "Engine", "fmt": {"bix": 272, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank a, 4"},
-    {"id": "STINGER_GDI_IT_B1", "path": "Engine", "fmt": {"bix": 352, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank b, 1"},
-    {"id": "STINGER_GDI_IT_B2", "path": "Engine", "fmt": {"bix": 368, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank b, 2"},
-    {"id": "STINGER_GDI_IT_B3", "path": "Engine", "fmt": {"bix": 384, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank b, 3"},
-    {"id": "STINGER_GDI_IT_B4", "path": "Engine", "fmt": {"bix": 400, "len": 16, "blsb": true, "max": 6553.5, "div": 10, "unit": "milliseconds" }, "name": "Gasoline direct injection time bank b, 4"}
-  ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E00A"}, "freq": 1,
   "signals": [
-    {"id": "STINGER_KNOCK_RETARD_1", "path": "Engine", "fmt": {"bix": 96,  "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 1"},
-    {"id": "STINGER_KNOCK_RETARD_2", "path": "Engine", "fmt": {"bix": 104, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 2"},
-    {"id": "STINGER_KNOCK_RETARD_3", "path": "Engine", "fmt": {"bix": 112, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 3"},
-    {"id": "STINGER_KNOCK_RETARD_4", "path": "Engine", "fmt": {"bix": 120, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 4"},
-    {"id": "STINGER_KNOCK_LEARN_1",  "path": "Engine", "fmt": {"bix": 160, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 1"},
-    {"id": "STINGER_KNOCK_LEARN_2",  "path": "Engine", "fmt": {"bix": 168, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 2"},
-    {"id": "STINGER_KNOCK_LEARN_3",  "path": "Engine", "fmt": {"bix": 176, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 3"},
-    {"id": "STINGER_KNOCK_LEARN_4",  "path": "Engine", "fmt": {"bix": 184, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 4"}
+    {"id": "STINGER_KNOCK_RETARD_1", "path": "Engine", "fmt": {"bix": 96,  "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 1", "description": "Not a knock-retard angle. On the MY2020 V6 this byte is session-constant (cyl 1) or voltage-correlated (2-4); hidden until identified.", "hidden": true},
+    {"id": "STINGER_KNOCK_RETARD_2", "path": "Engine", "fmt": {"bix": 104, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 2", "description": "Not a knock-retard angle. On the MY2020 V6 this byte is session-constant (cyl 1) or voltage-correlated (2-4); hidden until identified.", "hidden": true},
+    {"id": "STINGER_KNOCK_RETARD_3", "path": "Engine", "fmt": {"bix": 112, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 3", "description": "Not a knock-retard angle. On the MY2020 V6 this byte is session-constant (cyl 1) or voltage-correlated (2-4); hidden until identified.", "hidden": true},
+    {"id": "STINGER_KNOCK_RETARD_4", "path": "Engine", "fmt": {"bix": 120, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock retard cylinder 4", "description": "Not a knock-retard angle. On the MY2020 V6 this byte is session-constant (cyl 1) or voltage-correlated (2-4); hidden until identified.", "hidden": true},
+    {"id": "STINGER_KNOCK_LEARN_1",  "path": "Engine", "fmt": {"bix": 160, "len": 8, "max": 25.4, "min": -25.6, "div": 5, "sign": true, "unit": "degrees" }, "name": "Knock learn cylinder 1",  "description": "Not a knock-learn value: it spans the full range and loosely tracks intake air temperature; hidden until identified.",                   "hidden": true}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E010"}, "freq": 1, "dbgfilter": { "to": 2019, "from": 2021 },
   "signals": [
