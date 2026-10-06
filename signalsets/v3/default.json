@@ -121,7 +121,7 @@
 { "hdr": "7C6", "rax": "7CE", "fcm1": true, "cmd": {"22": "B002"}, "freq": 5, "dbgfilter": { "years": [2019] },
   "signals": [
     {"id": "STINGER_FLI_VOL",         "path": "Fuel",    "fmt": {"bix": 32, "len": 8,  "max": 127.5,    "div": 2,                  "nullmax": 127.5, "unit": "liters"     }, "name": "Fuel level",         "suggestedMetric": "fuelTankLevel"},
-    {"id": "STINGER_CLUSTER_VOLTAGE", "path": "Battery", "fmt": {"bix": 40, "len": 8,  "max": 18,       "div": 12.8,                                 "unit": "volts"      }, "name": "Cluster voltage",    "suggestedMetric": "starterBatteryVoltage", "description": "The cluster's own reading. About 2.8% below the ECM and steering module voltages; scale unconfirmed."},
+    {"id": "STINGER_CLUSTER_VOLTAGE", "path": "Battery", "fmt": {"bix": 40, "len": 8,  "max": 18,       "div": 12.8,                                 "unit": "volts"      }, "name": "Cluster voltage",    "description": "The cluster's own reading. About 2.8% below the ECM and steering module voltages; scale unconfirmed."},
     {"id": "STINGER_ODO_KM",          "path": "Trips",   "fmt": {"bix": 48, "len": 24, "max": 16777215,              "nullmin": 0,                   "unit": "kilometers" }, "name": "Odometer, metric",   "suggestedMetric": "odometer"},
     {"id": "STINGER_ODO_MI",          "path": "Trips",   "fmt": {"bix": 72, "len": 24, "max": 16777215,              "nullmin": 0,                   "unit": "miles"      }, "name": "Odometer, imperial", "suggestedMetric": "odometer"}
   ]},
@@ -136,7 +136,7 @@
   "signals": [
     {"id": "STINGER_MDPS_SUPPLY_V",      "path": "Battery",  "fmt": {           "len": 8,  "max": 25.5,                "div": 10,               "unit": "volts"             }, "name": "Steering module supply voltage"},
     {"id": "STINGER_VSS_MDPS",           "path": "Movement", "fmt": {"bix": 72, "len": 16, "max": 6553.5,              "div": 10,               "unit": "kilometersPerHour" }, "name": "Vehicle speed (MDPS)"},
-    {"id": "STINGER_MDPS_MOTOR_CURRENT", "path": "Control",  "fmt": {"bix": 88, "len": 8,  "max": 127,    "min": -128,            "sign": true, "unit": "amps"              }, "name": "MDPS status byte",               "description": "Not a motor current: reads 16 while running (occasionally 17 on other cars), 0 with the engine off or just after a start.", "hidden": true}
+    {"id": "STINGER_MDPS_MOTOR_CURRENT", "path": "Control",  "fmt": {"bix": 88, "len": 8,  "max": 127,    "min": -128,            "sign": true, "unit": "scalar"            }, "name": "MDPS status byte",               "description": "Not a motor current: reads 16 while running (occasionally 17 on other cars), 0 with the engine off or just after a start.", "hidden": true}
   ]},
 { "hdr": "7E0", "cmd": {"01": "05"}, "freq": 5,
   "signals": [
@@ -157,7 +157,7 @@
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "E001"}, "freq": 2,
   "signals": [
     {"id": "STINGER_BATTERY_V",                "path": "Battery", "fmt": {"bix": 32,  "len": 8,  "max": 17.37,                   "mul": 17.37, "div": 255,                  "nullmin": 0,                 "unit": "volts"   },                "name": "Battery voltage"},
-    {"id": "STINGER_BATTERY_V_AFTER_IGNITION", "path": "Battery", "fmt": {"bix": 40,  "len": 8,  "max": 17.37,                   "mul": 17.37, "div": 255,                                                "unit": "volts"   },                "name": "Ignition supply voltage (ECM)",      "description": "The ignition-switched supply. It drops to 0 V once the ignition is off, shown as no value."},
+    {"id": "STINGER_BATTERY_V_AFTER_IGNITION", "path": "Battery", "fmt": {"bix": 40,  "len": 8,  "max": 17.37,                   "mul": 17.37, "div": 255,                  "nullmin": 0,                 "unit": "volts"   },                "name": "Ignition supply voltage (ECM)",      "description": "The ignition-switched supply. It drops to 0 V once the ignition is off, shown as no value."},
     {"id": "STINGER_BATTERY_SOC",              "path": "Battery", "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                                              "nullmax": 255, "unit": "percent" },                "name": "12 V battery state of charge (ECM)"},
     {"id": "STINGER_RPM_E001",                 "path": "Engine",  "fmt": {"bix": 56,  "len": 16, "blsb": true,  "max": 16383.75,                              "div": 4,                                                     "unit": "rpm"     },                                            "name": "Engine RPM (E001)"},
     {"id": "STINGER_IDLE_TGT_E001",            "path": "Engine",  "fmt": {"bix": 72,  "len": 8,  "max": 2550,                    "mul": 10,                                                               "unit": "rpm"     },                "name": "Target idle speed (E001)"},
@@ -312,14 +312,13 @@
 { "hdr": "7E1", "rax": "7E9", "cmd": {"22": "01A0"}, "freq": 0.25, "dbgfilter": { "to": 2018, "years": [2021] },
   "signals": [
     {"id": "STINGER_RPM_7E1",               "path": "Movement",     "fmt": {"bix": 32,  "len": 16, "max": 16383.75,                          "div": 4,                 "unit": "rpm"               }, "name": "Engine RPM"},
-    {"id": "STINGER_VSS_7E1",               "path": "Movement",     "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                         "unit": "kilometersPerHour" }, "name": "Vehicle speed (TCM)",                                 "suggestedMetric": "speed",                                                                                                                            "description": "The transmission's estimate from output-shaft speed. Reads about 5% above SAE 010D and HVAC speed, and about 3.5% above odometer distance."},
+    {"id": "STINGER_VSS_7E1",               "path": "Movement",     "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                         "unit": "kilometersPerHour" }, "name": "Vehicle speed (TCM)",                                 "description": "The transmission's estimate from output-shaft speed. Reads about 5% above SAE 010D and HVAC speed, and about 3.5% above odometer distance."},
     {"id": "STINGER_REL_APP",               "path": "Movement",     "fmt": {"bix": 64,  "len": 8,  "max": 100,                   "mul": 100, "div": 255,               "unit": "percent"           }, "name": "Relative accelerator pedal position"},
     {"id": "STINGER_TURBINE_SPEED",         "path": "Transmission", "fmt": {"bix": 72,  "len": 16, "max": 16383.75,                          "div": 4,                 "unit": "rpm"               }, "name": "Torque converter turbine speed (transmission input)", "description": "Not the turbocharger; turbo shaft speed is not reported. Equals engine speed minus converter slip, and reads 0 when stopped in gear."},
     {"id": "STINGER_OUTPUT_SPEED",          "path": "Transmission", "fmt": {"bix": 88,  "len": 16, "max": 16383.75,                          "div": 4,                 "unit": "rpm"               }, "name": "Output speed"},
     {"id": "STINGER_ATF_T_7E1",             "path": "Transmission", "fmt": {"bix": 104, "len": 8,  "max": 215,      "min": -40,                           "add": -40,  "unit": "celsius"           }, "name": "Automatic transmission fluid temperature",            "suggestedMetric": "transmissionFluidTemperature"},
     {"id": "STINGER_GEAR_RATIO",            "path": "Transmission", "fmt": {"bix": 112, "len": 16, "max": 65.535,                            "div": 1000,              "unit": "scalar"            }, "name": "Current gear ratio"},
     {"id": "STINGER_TORQUE_CONVERTER_SLIP", "path": "Transmission", "fmt": {"bix": 128, "len": 16, "max": 15871.75, "min": -512,             "div": 4,    "add": -512, "unit": "rpm"               }, "name": "Torque converter slip"},
-    {"id": "STINGER_CURRENT_GEAR",          "path": "Transmission", "fmt": {"bix": 168, "len": 8,  "max": 255,                                                         "unit": "scalar"            }, "name": "Current gear",                                        "description": "1-8 = gear engaged; 0 = Park or Neutral; 14 = Reverse."},
     {"id": "STINGER_COMMANDED_GEAR",        "path": "Transmission", "fmt": {"bix": 180, "len": 4,  "max": 15,                                                          "unit": "scalar"            }, "name": "Commanded gear"},
     {"id": "STINGER_BRAKE_PEDAL",           "path": "Control",      "fmt": {"bix": 199, "len": 1,  "max": 1,                                                           "unit": "noyes"             }, "name": "Brake pedal pressed?"},
     {"id": "STINGER_GEAR_7E1", "path": "Transmission", "name": "Gear selector", "description": "Selector position. 8-11 verified against gear and speed; 12 (manual) inferred.", "fmt": {"bix": 160, "len": 8, "map": {
@@ -328,6 +327,19 @@
           "10": { "description": "Reverse", "value": "REVERSE" },
           "11": { "description": "Park",    "value": "PARK" },
           "12": { "description": "Manual",  "value": "MANUAL" }
+        }}
+    },
+    {"id": "STINGER_CURRENT_GEAR", "path": "Transmission", "name": "Current gear", "description": "Gear engaged. Raw 0 = Park or Neutral, 1-8 = gear, 14 = Reverse.", "fmt": {"bix": 168, "len": 8, "map": {
+          "0":  { "description": "Park/Neutral", "value": "PN" },
+          "1":  { "description": "1st",          "value": "1" },
+          "2":  { "description": "2nd",          "value": "2" },
+          "3":  { "description": "3rd",          "value": "3" },
+          "4":  { "description": "4th",          "value": "4" },
+          "5":  { "description": "5th",          "value": "5" },
+          "6":  { "description": "6th",          "value": "6" },
+          "7":  { "description": "7th",          "value": "7" },
+          "8":  { "description": "8th",          "value": "8" },
+          "14": { "description": "Reverse",      "value": "R" }
         }}
     }
   ]},
